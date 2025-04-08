@@ -3,6 +3,7 @@ This repository includes code related to Lysosome and Reticle pipeline.
 
 
 ----- Reticle Pipeline -----
+
 This pipeline includes the following steps:
 1. Difference of Gauss.
 2. Calculate Binary mask of the step 1 (DoG).
