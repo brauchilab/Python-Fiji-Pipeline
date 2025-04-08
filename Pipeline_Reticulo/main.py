@@ -42,7 +42,7 @@ def main(input_folder, output_path, sigma1, sigma2, remove_outliers_filter_size,
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process image stack with Difference of Gaussians and ROIs.")
     parser.add_argument('--input_folder', type=str, required=True, help='Path to the input folder containing .tif files')
-    parser.add_argument('--output_path', type=str, required=True, help='Directory where results will be saved')
+    parser.add_argument('--output_folder', type=str, required=True, help='Directory where results will be saved')
     parser.add_argument('--sigma1', type=float, required=True, help='Sigma1 for Difference of Gaussians')
     parser.add_argument('--sigma2', type=float, required=True, help='Sigma2 for Difference of Gaussians')
     parser.add_argument('--remove_outliers_filter_size', type=int, required=True, help='Size for median filter to remove outliers')
@@ -51,4 +51,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    main(args.input_folder, args.output_path, args.sigma1, args.sigma2, args.remove_outliers_filter_size, tuple(args.roi_size), tuple(args.frame_range))
+    main(args.input_folder, args.output_folder, args.sigma1, args.sigma2, args.remove_outliers_filter_size, tuple(args.roi_size), tuple(args.frame_range))
