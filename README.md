@@ -29,6 +29,7 @@ Locally:
     python3 main.py --input_folder "/Users/alvaro/Desktop/pyimagej/macro_reticulo/data" --output_path "/Users/alvaro/Desktop/pyimagej/macro_reticulo/output" --sigma1 1.0 --sigma2 3.0 --remove_outliers_filter_size 4 --roi_size 20 20 --frame_range 30 34
 
 Remote Patagon (outside of container): 
+
     Without sbatch:
         srun -p rtx -c 1 --mem=16G --container-workdir=${PWD} --container-name=cuda-11.2.2 /home/brauchilab/anaconda3/bin/python3 /home/brauchilab/Macros/Macro_Reticulo/pipeline_modular.py --input_folder "/home/brauchilab/Macros/Macro_Reticulo/data/" --output_path "/home/brauchilab/Macros/Macro_Reticulo/output" --sigma1 1.0 --sigma2 2.0 --remove_outliers_filter_size 4 --roi_size 20 20 --frame_range 30 34
 
